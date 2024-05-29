@@ -1,12 +1,33 @@
 services:
+  postgis:
+    build:
+      context: ./postgis
+      dockerfile: Dockerfile
+    container_name: "gpx4run-postgis"
+    ports:
+      - 5432:5432
+    networks:
+      - default
+    restart: unless-stopped
+
   osrm-extract:
     image: osrm/osrm-backend
+    container_name: "gpx4run-osrm"
     volumes:
       - ~/Documents/osm:/data
       - ./profiles:/profiles
+    networks:
+      - default
+    ports:
+      - 6000:5000
+    restart: unless-stopped
     command: bash -c "
       osrm-extract -p /profiles/running.lua /data/singapore.osm.pbf
       && osrm-partition /data/singapore.osrm
       && osrm-customize /data/singapore.osrm
       && osrm-routed --algorithm mld /data/singapore.osrm
       "
+
+networks:
+  default:
+    driver: bridge

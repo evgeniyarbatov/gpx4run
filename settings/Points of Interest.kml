@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Points of Interest</name>
+    <Style id="icon-1899-0288D1-nodesc-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-0288D1-nodesc-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-0288D1-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0288D1-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0288D1-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Placemark>
+      <name>Tanjong Rhu</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          103.8699926,1.2981104,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tanjong Rhu View</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          103.8712611,1.2992573,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tanjong Rhu Bridge</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          103.8737869,1.299257,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Geylang Park Connector</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          103.8808614,1.3011868,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Gardens Bay East</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          103.8690283,1.2879669,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Marina Promenade</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          103.8647997,1.289113,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Gardens by the Bay</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          103.8606031,1.2769371,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Kallang Riverside Park</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          103.8686156,1.3075889,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Kallang River</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          103.8704609,1.3096161,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Stadium Promenade</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          103.8722526,1.3030518,0
+        </coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>
