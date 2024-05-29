@@ -14,7 +14,7 @@ services:
     image: osrm/osrm-backend
     container_name: "gpx4run-osrm"
     volumes:
-      - ~/Documents/osm:/data
+      - ~/Downloads/custom-osm:/data
       - ./profiles:/profiles
     networks:
       - default
@@ -22,10 +22,10 @@ services:
       - 6000:5000
     restart: unless-stopped
     command: bash -c "
-      osrm-extract -p /profiles/running.lua /data/singapore.osm.pbf
-      && osrm-partition /data/singapore.osrm
-      && osrm-customize /data/singapore.osrm
-      && osrm-routed --algorithm mld /data/singapore.osrm
+      osrm-extract -p /profiles/running.lua /data/strava.osm
+      && osrm-partition /data/strava.osrm
+      && osrm-customize /data/strava.osrm
+      && osrm-routed --algorithm mld /data/strava.osrm
       "
 
 networks:
