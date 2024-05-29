@@ -1,0 +1,12 @@
+services:
+  osrm-extract:
+    image: osrm/osrm-backend
+    volumes:
+      - ~/Documents/osm:/data
+      - ./profiles:/profiles
+    command: bash -c "
+      osrm-extract -p /profiles/running.lua /data/singapore.osm.pbf
+      && osrm-partition /data/singapore.osrm
+      && osrm-customize /data/singapore.osrm
+      && osrm-routed --algorithm mld /data/singapore.osrm
+      "
