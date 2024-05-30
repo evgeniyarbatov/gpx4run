@@ -14,7 +14,7 @@ services:
     image: osrm/osrm-backend
     container_name: "gpx4run-osrm"
     volumes:
-      - ~/Downloads/custom-osm:/data
+      - ~/Documents/custom_osm:/data
       - ./profiles:/profiles
     networks:
       - default
