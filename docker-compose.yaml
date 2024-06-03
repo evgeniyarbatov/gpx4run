@@ -10,7 +10,15 @@ services:
       - default
     restart: unless-stopped
 
-  osrm-extract:
+  osrm-frontend:
+    image: osrm/osrm-frontend
+    container_name: "osrm-frontend"
+    ports:
+      - "9966:9966"
+    environment:
+      - OSRM_BACKEND=http://osrm-backend:6000
+
+  osrm-backend:
     image: osrm/osrm-backend
     container_name: "gpx4run-osrm"
     volumes:
@@ -22,11 +30,15 @@ services:
       - 6000:5000
     restart: unless-stopped
     command: bash -c "
-      osrm-extract -p /profiles/foot.lua /data/strava.osm
+      osrm-extract -p /profiles/all.lua /data/strava.osm
       && osrm-partition /data/strava.osrm
       && osrm-customize /data/strava.osrm
       && osrm-routed --algorithm mld /data/strava.osrm
       "
+  
+
+
+
 
 networks:
   default:
