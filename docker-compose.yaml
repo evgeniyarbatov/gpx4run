@@ -9,7 +9,6 @@ services:
     networks:
       - default
     restart: unless-stopped
-
   osrm-backend:
     image: osrm/osrm-backend
     container_name: "gpx4run-osrm"
